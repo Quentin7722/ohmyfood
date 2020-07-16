@@ -1,0 +1,530 @@
+$bg-color-1: #579C87;
+$bg-color-2: #FCDFDB;
+$font-color: #FCCA46;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header, footer, .next{ 
+    background-color: $bg-color-1;
+    color: $font-color;
+    font-family: 'Roboto', sans-serif;   
+}
+
+header{
+    margin-bottom: 50px;
+        h1{
+            text-align: center;
+            padding: 15px;
+            font-size: 50px;
+        }
+}
+footer{
+        height: 60px;
+        position: sticky;
+        bottom: 0;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 20px      
+}
+
+.lien:hover {animation: wiggle 3s infinite;} 
+
+
+
+/* Acceuil */
+
+a{
+    color: inherit;
+    text-decoration: none; 
+}
+
+p{
+    text-align: center;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 900px; 
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    font-size: 35px;
+
+        a{
+            color: inherit;
+            text-decoration: none;
+            width: 49%;
+            height: 500px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            margin-bottom: 30px;
+
+                .container__carte{
+                    width: 100%;
+                    height: 100%;   
+                    transition: transform .2s;
+                        &.container__carte:hover {
+                            font-size: 50px;
+                            opacity: 0.7; 
+                                .fa-music{
+                                    font-size: 70px;
+                                }
+                                .text{
+                                    top: 35%;
+                                }
+                                .text__note{
+                                    top: 25%;
+                                }
+                                .text--menu{
+                                    font-size: 50px;
+                                }   
+                        }     
+                        .text{
+                        position: relative;
+                        top: 45%;
+                         }     
+                }
+        }
+}             
+.container{
+    .text--menu{
+        font-family: 'Kavivanar', cursive;
+    }
+}
+.container__carte--note{
+    font-family: 'Devonshire', cursive;
+     background-color: #FCDFDB;
+        .text__note{
+            position: relative;
+            top: 40%;
+        }
+        .text--note{
+            font-family: 'Architects Daughter', cursive;
+        }
+        .fa-music{
+            background: linear-gradient(to right, #CB7E23, #F04A5E);
+            color: #FCDFDB;
+
+        }
+        
+}
+    
+.container__carte--chic{
+    font-size: 22px;
+    background-color: #FFF5FE;
+    font-family: 'Playfair Display', serif;
+        .text--purple{
+            background: linear-gradient(to right, #CB7E23, #A466C7);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            }
+        .text--menu{
+            color: #CB7E23;
+            font-family: 'Playfair Display', serif;
+            font-size: 35px;
+        }  
+}
+
+.container__carte--délice{
+    background-color: #F9F9F9;
+    font-family: 'Seaweed Script', cursive;
+        .text--blue{
+            background: linear-gradient(to right, #0431DF, #1B91FA);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        .text--menu{
+            color: #0887FB;
+        }
+    }
+        
+.container__carte--palette{
+    top: 700px;
+    right: 400px;
+    background-color: #FDFFFD;
+    font-family: 'Rancho', cursive;
+        .text--green{
+            background: linear-gradient(to right, #42973C, #B0F377);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        .text--menu{
+            color: #72BF56;
+        }
+}
+
+.next{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-color: $bg-color-1;
+    color: $font-color;
+    width: 320px;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 10px 15px 10px 25px;
+        .load-3{
+            margin-left: 12px;
+            position: relative;
+            top: -5px;
+        }
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    background-color: $font-color;
+}
+
+.next .dot:nth-last-child(1) {animation: loadingC .6s .1s linear infinite;}
+.next .dot:nth-last-child(2) {animation: loadingC .6s .2s linear infinite;}
+.next .dot:nth-last-child(3) {animation: loadingC .6s .3s linear infinite;}
+
+@keyframes loadingC {
+    0% {transform: translate(0,0);}
+    50% {transform: translate(0,15px);}
+    100% {transform: translate(0,0);}
+}
+@keyframes wiggle{
+    0%{transform: rotate(0deg);}
+    3%{transform: rotate(-6deg);}
+    4%{transform: rotate(6deg);}
+    5%{transform: rotate(0deg);}
+    100%{transform: rotate(0deg);}
+}
+/* Cartes */
+
+h3, h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title__fira{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.container-carte{
+    text-align: center;
+    margin: 0 auto;
+    background-color: $bg-color-2;
+    max-width: 750px;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 110px;
+    font-family: 'Devonshire', cursive;
+    font-size: 18px;
+    padding: 80px 70px 115px 70px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    .plat{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: baseline;
+        h3{
+            font-size: 25px;
+            font-family: 'Caveat', cursive;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+        } 
+        .line{
+            width: 200px;
+        } 
+    }
+    .plat h3::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: red;
+        transition: width .3s;
+        margin-top: 7px;
+    }
+    .plat h3:hover::after {
+        width: 100%;
+    }
+    .fa-music{
+        background: linear-gradient(to right, #CB7E23, #F04A5E);
+        color: #FCDFDB;
+        font-size: 50px;
+    } 
+    .prix{
+        margin-right: 0px;
+        font-family: 'Caveat', cursive;
+        font-weight: bold;
+    }
+    h2{
+        font-size: 45px;
+        margin-bottom: 70px;
+        font-weight: initial;
+    }
+    .note-title{
+        font-weight: initial;
+    }
+    h3{
+        font-size: 35px;
+        .fa-music{
+            position: static;
+            font-size: 30px;
+            margin-right: 10px;
+        }
+    }
+    p{
+        text-align: left;
+        margin-right: 10px;
+    }
+
+    ul{
+        font-size: 22px;
+        list-style: none;
+        font-family: 'Rancho', cursive;
+        margin: 20px 0 60px 0;
+            li{
+                display: flex;
+                justify-content: space-between;  
+            }
+    }  
+}
+
+.container--gradient{
+    background-color: #FFF5FE;
+    font-family: 'Playfair Display', serif;
+    padding: 100px 70px 180px 70px; 
+        h3.hover.hover-1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px; 
+        }
+        h2{
+            font-size: 35px;
+            background: linear-gradient(to right, #CB7E23, #A466C7);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+        }
+        .chic--orange, .plat--orange{
+            color: #C57511;
+        }
+        .chic--purple, .plat--purple{
+           color: #A6669A ;
+        }
+        .chic--purple2, .plat--purple2{
+            color: #704CCF;
+        }
+        ul{
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            padding: 0px 50px;
+        }
+        .prix{
+            font-family: initial;
+        }        
+}
+
+.container--blue{
+    background-color: #F9F9F9;
+    font-family: 'Rancho', cursive;
+        .text--blue{
+        background: linear-gradient(to right, #0431DF, #1B91FA);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-family: 'Seaweed Script', cursive;
+        font-size: 50px;
+        } 
+       ul{
+        padding: 0px 50px;
+       }         
+}
+
+.container--green{
+    background-color: white;
+    font-family: 'Rancho', cursive;
+    .text--green{
+        background: linear-gradient(to right, #42973C, #B0F377);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        font-size: 60px;
+    }
+    ul{
+        padding: 0px 50px;
+       }         
+}
+
+/* Mentions */
+
+.mentions{
+    font-size: 50px;;
+    height: 1190px;
+        p{
+            position: relative;
+            top:50%;
+            text-align: center;
+        }
+}
+/* Media queries */
+
+@media screen and (max-width: 954px) {
+    .container{
+        padding: 0 20px;     
+    }
+}
+@media screen and (min-width: 383px) and (max-width: 690px) {
+    .container{
+     max-width: 400px;
+    }
+}
+@media screen and (min-width: 551px) and (max-width: 690px) {
+    footer{
+        padding: 20px 3px;
+    }
+    .container{
+        justify-content: center;
+        padding: 0 20px;
+            a{
+                width: 100%;
+            }
+    }
+    .container-carte{
+        width: 90%;
+        .plat{
+            .line{
+                width: 30%;
+            }
+        }
+    }
+    .container--gradient{
+        .plat{
+            .line{
+                width: 23%;
+            }
+        }
+        ul{
+            padding: 0px;
+        }
+    }
+    .container--blue{
+        ul{
+            padding: 0px;
+        }
+    }
+    .container--green{
+        ul{
+            padding: 0px;
+        }
+    }
+}
+@media screen and (min-width: 444px) and (max-width: 550px) {
+    footer{
+        padding: 20px 3px;
+    }
+    .container{
+        justify-content: center;
+        padding: 0 20px;
+            a{
+                width: 100%;
+            }
+    }
+    .container-carte{
+        width: 100%;
+        padding: 65px 10px 125px 10px;
+        font-size: 16px;
+        .plat{
+            .line{
+                width: 30%;
+            }
+        }
+    }
+    .container--gradient{
+        .plat{
+            .line{
+                width: 23%;
+            }
+        }
+        ul{
+            padding: 0px;
+        }
+    }
+    .container--green{
+        .line{
+            width: 25%;
+        }
+        ul{
+            padding: 0px;
+        }
+        
+    }
+    .container--blue{
+        ul{
+            padding: 0px;
+        }
+    }
+}      
+@media screen and (max-width: 443px) 
+{   
+    footer{
+        padding: 20px 3px;
+    }
+    .container{
+        justify-content: center;
+        padding: 0 20px;
+            a{
+                width: 100%;
+            }
+    }
+    .container-carte{
+        width: 100%;
+        padding: 100px 10px 175px 10px;
+        font-size: 16px;
+        .plat{
+            .line{
+                width: 20%;
+            }
+        }
+        h2{
+            font-size: 30px;
+        }
+        h3{
+            margin-bottom: 0px;
+            font-size: 25px;
+        }
+    }
+    .container--gradient{
+        .plat{
+            .line{
+                width: 10%;
+            }
+        }
+        ul{
+            padding: 0px;
+        }       
+        
+    }
+    .container--green{
+        .text--green{
+            font-size: 40px;
+        }
+        ul{
+            padding: 0px;
+        }
+        .line{
+            height: 4px;
+        }    
+    }
+    .container--blue{
+        .text--blue{
+            font-size: 40px;
+        }
+        ul{
+            padding: 0px;
+        }       
+    }
+}
